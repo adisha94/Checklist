@@ -44,17 +44,32 @@ var newNode = Node()
 var newList = CheckList()
 
 
-var check: boolean
+var check : Bool = false
 
-func contain(Node targetNode)
+func contain(targetNode: Node) -> Bool
 {
-    for (Node currentNode)
+    for currentNode in myList
+    {
+        if (currentNode == targetNode)
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
-//func add(Node newNode)
-//{
-//    if (
-//}
+func add(newNode : Node)
+{
+    if (contain(newNode) == true)
+    {
+        newNode.quantity++;
+    }
+    else
+    {
+        myList.append(newNode);
+    }
+    
+}
 
 //public void add(Node newNode)
 //{
