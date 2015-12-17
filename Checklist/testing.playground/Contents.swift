@@ -34,7 +34,7 @@ class CheckList
     
     func add(newTask : String) -> [Node]
     {
-        let newNode : Node
+        var newNode: Node
         newNode.data = newTask
         if (contain(newNode.data) == true)
         {
@@ -74,33 +74,10 @@ func == (node1: CheckList.Node, node2: CheckList.Node) -> Bool
     return false;
 }
 
-
-
-var myList = [Node]()
-
-
-var newNodeLocal = Node()
-newNodeLocal.data = "Additinoal task"
-
-myList.append(newNodeLocal)
-
 var newList = CheckList()
 
 
-var newNode = CheckList.Node()
-newNode.data = "Adish needs to take out the trash"
-
+var newNodeTest = CheckList.Node()
+newNodeTest.data = "Adish trash cleanup"
 
 newList.add("This is cool")
-
-
-print("the value of mylist is currently \(myList)");
-
-//public void add(Node newNode)
-//{
-//    if (myList.contains(newNode) == false)
-//    myList.add(newNode);
-//    else
-//    newNode.quantity++;
-//    
-//}
