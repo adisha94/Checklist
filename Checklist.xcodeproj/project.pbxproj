@@ -49,6 +49,7 @@
 		39E5A67C1C22987F00A13EC6 /* ChecklistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChecklistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39E5A6801C22987F00A13EC6 /* ChecklistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistUITests.swift; sourceTree = "<group>"; };
 		39E5A6821C22987F00A13EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39E5A68E1C229A2D00A13EC6 /* testing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = testing.playground; path = Checklist/testing.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		39E5A6511C22987E00A13EC6 = {
 			isa = PBXGroup;
 			children = (
+				39E5A68E1C229A2D00A13EC6 /* testing.playground */,
 				39E5A65C1C22987E00A13EC6 /* Checklist */,
 				39E5A6741C22987F00A13EC6 /* ChecklistTests */,
 				39E5A67F1C22987F00A13EC6 /* ChecklistUITests */,

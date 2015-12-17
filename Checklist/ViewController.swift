@@ -28,9 +28,8 @@ class ViewController: UIViewController
     
     class Node
     {
-        data = "";
-        quantity = 0;
-        
+        let data = "";
+        var quantity = 1;
     }
 
 }
