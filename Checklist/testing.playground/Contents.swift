@@ -5,11 +5,8 @@ import UIKit
 
 class CheckList
 {
-    
-    func Checklist()
-    {
-        var myList : [Node]
-    }
+    var myList : [Node] = []
+    var checked : Bool = false;
     
     class Node
     {
@@ -21,7 +18,35 @@ class CheckList
             return data + ": " + "\(quantity)";
         }
     }
-
+    
+    
+    func contain(targetNodedata: String) -> Bool
+    {
+        for currentNode in myList
+        {
+            if (currentNode.data == targetNodedata)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    func add(newTask : String) -> [Node]
+    {
+        let newNode : Node
+        newNode.data = newTask
+        if (contain(newNode.data) == true)
+        {
+            newNode.quantity++;
+            return myList
+        }
+        else
+        {
+            myList.append(newNode);
+            return myList
+        }
+    }
     
 }
 
@@ -35,41 +60,41 @@ class Node
     {
         return data + ": " + "\(quantity)";
     }
+    
+
 }
 
-
-var myList : [Node]
-
-var newNode = Node()
-var newList = CheckList()
-
-
-var check : Bool = false
-
-func contain(targetNode: Node) -> Bool
+infix operator ** { associativity left precedence 160 }
+func == (node1: CheckList.Node, node2: CheckList.Node) -> Bool
 {
-    for currentNode in myList
+    if (node1.data == node2.data)
     {
-        if (currentNode == targetNode)
-        {
-            return true;
-        }
+        return true
     }
     return false;
 }
 
-func add(newNode : Node)
-{
-    if (contain(newNode) == true)
-    {
-        newNode.quantity++;
-    }
-    else
-    {
-        myList.append(newNode);
-    }
-    
-}
+
+
+var myList = [Node]()
+
+
+var newNodeLocal = Node()
+newNodeLocal.data = "Additinoal task"
+
+myList.append(newNodeLocal)
+
+var newList = CheckList()
+
+
+var newNode = CheckList.Node()
+newNode.data = "Adish needs to take out the trash"
+
+
+newList.add("This is cool")
+
+
+print("the value of mylist is currently \(myList)");
 
 //public void add(Node newNode)
 //{

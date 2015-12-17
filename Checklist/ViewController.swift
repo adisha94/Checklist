@@ -8,6 +8,9 @@
 
 import UIKit
 
+infix operator ** { associativity left precedence 160 }
+
+
 class ViewController: UIViewController
 {
 
@@ -24,13 +27,23 @@ class ViewController: UIViewController
     }
 
     
+
     
-    
-    class Node
-    {
-        let data = "";
-        var quantity = 1;
-    }
 
 }
 
+
+class Node
+{
+    let data = "";
+    var quantity = 1;
+}
+
+func == (node1: Node, node2: Node) -> Bool
+{
+    if (node1.data == node2.data)
+    {
+        return true
+    }
+    return false;
+}
