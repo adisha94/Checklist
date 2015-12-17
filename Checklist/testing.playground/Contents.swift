@@ -2,14 +2,19 @@
 
 import UIKit
 
-var str = "Hello, playground"
 
 class CheckList
 {
+    
+    func Checklist()
+    {
+        var myList : [Node]
+    }
+    
     class Node
     {
-        var data = "";
-        var quantity = 1;
+        var data : String = "";
+        var quantity : Int = 1;
         
         func toString() -> String
         {
@@ -32,8 +37,24 @@ class Node
     }
 }
 
-var newNode = CheckList()
 
+var myList : [Node]
+
+var newNode = Node()
+var newList = CheckList()
+
+
+var check: boolean
+
+func contain(Node targetNode)
+{
+    for (Node currentNode)
+}
+
+//func add(Node newNode)
+//{
+//    if (
+//}
 
 //public void add(Node newNode)
 //{
@@ -43,4 +64,3 @@ var newNode = CheckList()
 //    newNode.quantity++;
 //    
 //}
-//
